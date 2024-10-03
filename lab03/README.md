@@ -46,8 +46,10 @@ learned/struggled with for task here
 ### Task 2 - Asymmetric Encryption
 
 * List all of the people that should be able to decrypt `task2.enc`
+  > If you encrypt a file with someone's public key, only the private key of that individual can decrypt the file. Only Matthew Kijowski can decrypt the message with his private key.
 * What key should be used to encrypt this file so that the instructor can guarantee that
   you encrypted it?
+  > I would encrypt it with my private key so he verify its authenticity by decrypting it with my public key.
 
 ---
 
@@ -55,12 +57,15 @@ learned/struggled with for task here
 
 * What is the benefit to you for having set this up?  Please be verbose and dicuss what additional
   protections having gpg encryption layerd into your email account provides.
+  > It provides confidentiality and integrity.  Encryption provides confidentiality by providing end-to-end encryption.  This is a great tool when sending information you don't want other people reading.  I protects sensitive information such as PII, financial data, etc.  It also provides integrity through the use of digital signatures.  Your digital signature can be validated by other individuals so they know that not only the message come from you, but it arrived unaltered.  Once a digital signature is applied to data, the data can't be changed without invalidating the digital signature.  
 
 ---
 
 ### Task 4 - Digital Signatures
 
 * What key would a recipient need to verify your signature?
+  > They need your public key. If they can decrypt the data with your public key, they know that the data was encypted with your private key.
 * Why is it important that you not change the file after signing it?
+  > Changing the file after signing it invalidates the signature.  The individual receiving the data won't be able to tell what was changed or by whom.  If you need to change something you must sign the data again, resend it, and let the individual know to disregard the previous data.
 
 
